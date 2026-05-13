@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstek Gönder - Absolute Combo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Üst Bar (Ana sayfadakiyle aynı) -->
+    <section id="anasayfa">
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <span>Setupunuza Uyacak Kombolar Burada</span>
+                <span>Bütçenize Uygun Ürünler</span>
+                <span>Yeni ürünler istek olarak eklenir</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navbar (Ana sayfadakiyle aynı) -->
+    <header class="nav">
+        <a href="index.html"><div class="logo">Absolute Combo</div></a>
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkimizda.html">Hakkımızda</a>
+            <a href="istek.html">İstek</a>
+        </nav>
+    </header>
+
+    <!-- İstek Formu Konteynırı -->
+    <div id="sonuc" style="flex-direction: column; align-items: center; margin-top: 20px;">
+        
+        <div class="kart" style="width: 100%; max-width: 450px; padding: 40px;">
+            <h2 style="margin-bottom: 10px;">Ürün Öner</h2>
+            <p style="font-weight: normal; font-size: 14px; color: #666; margin-bottom: 25px;">
+                Eklenmesini istediğin ekipmanın adını aşağıya yazabilirsin.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <!-- Ana sayfadaki input stilini kullanıyor -->
+                <input type="text" id="istekUrun" placeholder="Örn: Razer Deathadder V3" style="width: 100%; box-sizing: border-box;">
+                
+                <!-- Ana sayfadaki buton stilini kullanıyor -->
+                <button onclick="istekGonder()" style="width: 100%;">Talebi İlet</button>
+            </div>
+
+            <!-- Başarı Mesajı (Gizli) -->
+            <div id="mesaj" style="display: none; margin-top: 20px; color: #283044; font-weight: bold; animation: pop 0.3s ease;">
+                Teşekkürler! İsteğin Takibe Alındı. 
+            </div>
+        </div>
+
+    </div>
+
+    <script src="combo.js"></script>
+</body>
+</html>
